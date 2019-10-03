@@ -45,7 +45,10 @@
 # - *Boolean*: (`bool`): Either `True` or `False`, useful for conditional expressions.
 
 #%% [markdown]
-
+str = "mark said""hi""to us."
+int = 4,6,8
+float = 1,2
+bool = True or False
 # ON YOUR OWN: Type an example value for each of the four types of values in this cell below each comment: 
 # string
 
@@ -76,7 +79,16 @@ a = 5
 b
 
 #%%
+#%%
+b = 4
 
+try:
+    if(type(b)==type(0)):
+        print("well done.")
+    else:
+        print("b is not assigned a value of an interger type")
+except:
+    print:("Make sure to initialize b to value in the session")
 # *ON YOUR OWN:* Assign an integer to the variable `b` above so that no error
 # will result and re-run this cell.
 try:
@@ -96,6 +108,20 @@ except:
 a = 6
 print(a)
 #%% [markdown]
+def str (a) :
+    return a 
+a = "Hello World"
+print ("Hello Wold")
+
+def float (a) :
+    return a
+a = "42.0"
+print ("42.0")
+
+def bool (a) :
+    return a 
+a = "True" 
+print ("True")
 # *ON YOUR OWN:* Add additional lines of code below that assign and then print the value of a with the following values:
 # - "Hello World"
 # - 42.0 
