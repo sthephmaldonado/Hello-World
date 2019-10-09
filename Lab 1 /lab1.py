@@ -369,4 +369,4 @@ def sum_random(x):
     for n in range (1,x+1):
         sum=sum+random.randint(1,100)
         return sum 
-        
+    
