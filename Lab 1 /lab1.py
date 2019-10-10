@@ -45,10 +45,7 @@
 # - *Boolean*: (`bool`): Either `True` or `False`, useful for conditional expressions.
 
 #%% [markdown]
-str = "mark said""hi""to us."
-int = 4,6,8
-float = 1,2
-bool = True or False
+
 # ON YOUR OWN: Type an example value for each of the four types of values in this cell below each comment: 
 # string
 
@@ -57,7 +54,10 @@ bool = True or False
 # float
 
 # bool
-
+str = "mark said""hi""to us."
+int = (4)
+float = 1,2
+bool = True 
 #%% [markdown]
 
 # # Types
