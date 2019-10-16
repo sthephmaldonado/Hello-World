@@ -9,7 +9,7 @@ predicates = ['CLOSED', 'SILENT', 'STRONG', 'GOOD', 'NARROW', 'NEAR',
 conjunctions = [' AND ', ' OR ', ' THEREFORE ', ' BUT ALSO ', 'WHETHER ', ' NOR ', ' BUT ', ' IF ']
 operators = ['A', 'EVERY', 'NO', 'NOT EVERY']
 
-def phrase(operators):
+def phrase(conjunctions):
     text = choice (operators) + '' + choice (subjects)
     if text == 'A APPLE':
         text = 'AN APPLE'
@@ -18,4 +18,4 @@ def phrase(operators):
 print('')
 print( phrase (subjects) + choice (predicates) + choice (conjunctions) +
        phrase (operators) + choice (predicates) + '.')
-print('')
+print('') 
