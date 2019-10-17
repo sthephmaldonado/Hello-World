@@ -1,7 +1,12 @@
 #excercise 7.3
 #%%
 def gender (name):
+    indicated = '?'
     if name[-1]=='a':
-        return 'female'
+        indicated = 'female'
     if name [-1]=='o':
-        return 'male'
+        indicated = 'male'
+        return indicated 
+
+
+#%%
