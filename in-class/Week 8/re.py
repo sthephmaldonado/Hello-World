@@ -9,7 +9,7 @@ x = re.search("^The.*Spain$", txt)
 #%%
 import re
 txt = "xaxaxaxaxaxa xa"
-x = re.search("xa",txt)
+x = re.search("*xa",txt)
 print(x)
 # x*
 #
@@ -24,10 +24,25 @@ zipcode4 = "oue23"
 # \d = [0-9]
 # \d = [0123456789]
 
+#%%
+zipcode1 = "4363-5373"
+print(re.search("^\d{5}$|^d{5}-\d{4}$", zipcode1))
+
+#%%
 print(re.search("\d", zipcode1))
 print(re.search("\d", zipcode2))
 print(re.search("\d", zipcode3))
 print(re.search("\d", zipcode4))
 print (x)
+# Time of day (with groups foe each part of the time)
 
 #%%
+
+time1 = "5pm"
+time2 = "12:00pm"
+time3 = "13:00"
+time4 = "00:02pm"
+print(re.search("\d", zipcode1))
+print(re.search("\d", zipcode2))
+print(re.search("\d", zipcode3))
+print(re.search("\d", zipcode4))
