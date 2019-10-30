@@ -5,6 +5,8 @@ try:
 	print(os.getcwd())
 except:
 	pass
+
+###### 
 #%% [markdown]
 # # Pixels and Pictures
 # Lab 2: Part 2
