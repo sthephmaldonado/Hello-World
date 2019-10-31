@@ -177,21 +177,20 @@ x.word_counts['angels']
 # [2-2] ON YOUR OWN:
 
 # Write code that finds the top 5 longest sentences in the wor You may store or display them however you choose, and you may build off of the code above that finds the longest sentence.
-from gutenberg.acquire import load_etext
-from gutenberg.cleanup import strip_headers
-from textblob import TextBlob
 
-text = strip_headers(load_etext(1065)).strip()
+from operator import itemgetter
+from textblob import TextBlob
 blob = TextBlob(text)
-max = 5
+max = 0
 index = 0
-# Find the longest sentence in the work
+mylist = []
 for key, sentence in enumerate(blob.sentences):
-    if(len(sentence.words) > max):
-        max = len(sentence.words)
-        index = key
-        print(sentence)
- 
+  mylist.append((sentence,len(sentence.word)))
+  (sentence,len(sentence.words))
+  max = len(sentence.words)
+  index = key
+sorted(my.list,key=itemgetter(1))
+        
 ####### It seems like it works but it just counted 4 sentences, not 5. I changed to max=6 amd still count just 4 sentences.
 #%%
 # [2-3] ON YOUR OWN:

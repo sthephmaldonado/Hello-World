@@ -92,6 +92,8 @@ ourimage.size
  
 # WRITE YOUR CODE HERE
 
+
+
 #%% [markdown]
 # # Gradients
 # Montfort describes the following technique for creating a *linear* gradient, or one where the color changes smoothly across an image.
