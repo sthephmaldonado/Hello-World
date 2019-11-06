@@ -38,3 +38,15 @@ img = Image.open ("Free-projects/beach1.jpg")
 img = img.filter(ImageFilter.GaussianBlur(radius = 5)) 
   
 img.show()  
+
+#%%
+from PIL import Image
+
+img = Image.open("Free-projects/beach1.jpg")
+gray = col.convert('L')
+bw = gray.point(lambda x: 0 if x<128 else 255, '1')
+bw.save("result_bw.png")
+img.show()
+
+##I tried making the image black and white but it didnt worked. The picture just become all black
+https://stackoverflow.com/questions/18777873/convert-rgb-to-black-or-white?rq=1
