@@ -31,3 +31,10 @@ from PIL import Image
 img = Image.open ("Free-projects/beach1.jpg")
 img.rotate(180).show()
 
+#%%
+from PIL import Image, ImageFilter
+
+img = Image.open ("Free-projects/beach1.jpg")
+img = img.filter(ImageFilter.GaussianBlur(radius = 5)) 
+  
+img.show()  
