@@ -59,22 +59,17 @@ class Car(object):
     
 myCar1 = Car(color(225, 20, 147), 0, 100, 2)
 myCar2 = Car(color(154, 50, 205), 0, 10, 1)
-if ((keyCode) and ((key == 'space key'))):
-    myCar2 = Car(color(random(255)), 0, 10, 1)
-else: 
-    myCar2 = Car(color(154, 50, 205), 0, 10, 1)
-    
-#
+
     
 def setup():
     size(200,200)
+    print("test")
+    noStroke()
     
-def draw(): 
-  background(255)
-  myCar1.drive()
-  myCar1.display()
-  myCar2.drive()
-  myCar2.display()
+ ## I tried using this methos but it didnt actually worked if ((keyCode) and ((key == 'space key'))):
+ ##myCar2 = Car(color(random(255)), 0, 10, 1) 
+ ## but the function didnt actally worked.
+
 
 
 #3-3
@@ -97,25 +92,14 @@ class Box(object):
         if self.xpos > width:
             self.xpos = 0
     
-myBox1 = Car(color(225, 20, 147), 0, 100, 2)
-myBox2 = Car(color(154, 50, 205), 0, 10, 4)
-myBox3 = Car(color(139, 71, 93), 0, 20, 3)
-myBox4 = Car(color(255, 255, 0), 0, 40, 3)
-myBox2 = Car(color(random(255)), 0, 50, 1)
+myBox1 = Car(color(225, 20, 147),random(0,200),random(0,200), 2)
+myBox2 = Car(color(154, 50, 205), random(0,200),random(0,200), 3)
+myBox3 = Car(color(139, 71, 93), random(0,200),random(0,200), 2)
+myBox4 = Car(color(255, 255, 0), random(0,200),random(0,200), 1)
+myBox2 = Car(color(random(255)), random(0,200),random(0,200), 4)
 
-def setup():
-    size(200,200)
-         
-def draw():
-  background(255)
-  myBox1.drive()
-  myBox1.display()
-  myBox2.drive()
-  myBox2.display()
-  myBox3.drive()
-  myBox3.display()
-  myBox4.drive()
-  myBox4.display()
+def mousePressed():
+    ellipse(mouseX, mouseY, 20, 20)
 
   
   # From the car function 3-1 I changed Car for Box and I made 2 more boxes going in differents speeds. 
