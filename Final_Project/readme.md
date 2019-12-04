@@ -18,7 +18,7 @@ Defining 5 variables
 
 Void reset: so every time the player loses the game rests. (it didn't actually worked)
 
-Drawing static shapes, the robot
+Drawing static shapes, the robot:
 To make an ellipse: The first two numbers are the numbers of the circle circumference, the third point is the width
 and the last is the height.
 Stroke: sets the color to draw lines around the shape 
@@ -36,7 +36,7 @@ Variable for the conditions of the ball by the X and Y axes
 
 In the end I put the color and draw the ball and make it ellipse type
 
-Pong game 
+Pong game:
 I decided to add a pong game and use the robot as a background of the game. 
 I tried using a simple pong game code https://gist.github.com/dc74089/4094da7928839063ae06 .
 I start having troubles, the ball first wouldn't even touch the movable bar it will just keep bouncing constantly. 
