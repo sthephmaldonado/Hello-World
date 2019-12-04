@@ -1,0 +1,65 @@
+
+void setup()
+{
+  size (800, 800);
+  }
+  
+// Axis variables and speed
+float ballX =0;
+float ballY =0;
+float speedX =random (2,5);
+float speedY =random (2,5);
+float rectSize = 200;
+void reset() {
+}
+void draw()
+{
+ background(240);
+  ellipse (400, 50, 100, 20); // oval on top
+  stroke(0, 0, 0);
+  fill (66, 134, 244);// color of the robot 
+  //body shape
+  quad (300, 100, 300, 200, 500, 200, 500, 100); // face
+  quad (250, 250, 300, 500, 500, 500, 550, 250); // big square, body
+  quad (320, 500, 320, 600, 380, 600, 380, 500); //leg left
+  quad (420, 500, 420, 600, 480, 600, 480, 500); //leg right
+  //eyes with triangle shape
+  fill (255, 0, 0); // color eyes
+  quad (350, 120, 350, 140, 450, 120, 450, 140); // eyes shape, with triangles
+  noStroke ();
+  fill (0, 168, 255);
+  quad (390, 50, 390, 100, 410, 100, 410, 50); // head
+  fill (255, 255, 0); // oval fill yellow
+  ellipse (400, 50, 100, 20);// oval on top
+
+// orders so that the ball does not pass from the bottom side x
+// in this case it bounces at the end of the screen (x axis)
+  if (ballX < 0 || ballX > width) speedX = -speedX;
+  if (ballY  > height) speedY = -speedY;
+  else speedY += 1; // this is for the ball to bounce constantly
+   // and do not stop with the x-axis but fall back to the y-axis
+
+  ballX += speedX; // speed variable for axis (X) and (Y)
+  ballY += speedY;
+
+  fill (0,0,0);
+  ellipse(ballX, ballY, 50, 50);
+  
+ // trying pong game 
+  rect(0, 0, 20, height); // rectangle on the left
+  rect(width-10, mouseY-rectSize/2, 10, rectSize); //Movable bar, How close is to the end.
+
+  // if ball hits movable bar, invert X direction
+  if ( ballX > width-30 && ballX < width -20 && ballY > mouseY-rectSize/2 && ballY < mouseY+rectSize/2 ) {
+    speedX = speedX * -1;
+   // if ball hits wall, change direction of X
+  if (ballX < 20) 
+    speedX *= -1; //reverse its speed by multiplying by -1
+    speedY *= 1;
+    ballX += speedX;
+    
+    }
+}
+void mousePressed() {
+  reset();
+}
